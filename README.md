@@ -1,0 +1,1 @@
+# sakura-translation-frontend-example
