@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name = "keywords" content = "Japanese English, English Japanese, Japanese, Translation, Corporate Training" />
+  <meta name = "description" content = "Japanese English Translation Services" />
+  <title>Sakura Translation | Services</title>
+  <link rel="stylesheet" href="style/main.min.css" />
+</head>
+<body>
+
+  <!-- custom navbar -->
+  <div class="navigation-main">
+    <div class="nav-container">
+      <div class="navbar-brand-group">
+          <a class="navbar-brand-img-container" href="#">
+              <img class="navbar-brand-img" src="img/sakura-logo.png" alt="Sakura Translation logo">
+          </a>
+          <span class="navbar-brand-title" href="#">Sakura Translation</span>
+      </div>
+      <button class="navbar-burger" id="toggler">
+        <span class="navbar-burger-icon"></span>
+      </button>
+    </div>
+    <div class="navigation-panel">
+      <!-- navbar item container -->
+      <div class="navbar-item-container">
+        <ul class="navbar-ul">
+          <li class="nav-li">
+            <a class="nav-a" href="index.html">Home</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="services.html">Services</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="training.html">Training</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="order.html">Order</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav button container -->
+      <div class="nav-button-container">
+          <button class="btn btn-outline-success singin-button" type="button" id="signin" data-toggle="modal" data-target="#signInFormModal">Sign In</button>
+      </div>
+    </div><!-- end of navigation panel-->
+  </div> <!-- end of navigation main -->
+
+  <!-- Sign in Modal -->
+  <div class="modal fade" id="signInFormModal" tabindex="-1" role="dialog" aria-labelledby="signInFormModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header-custom">
+          <h4 class="modal-title" id="signInFormModalTitle">Sign in</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="username" class="required-field">Username</label>
+              <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password" class="required-field">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="modal-footer-custom">
+              <button type="submit" class="btn btn-secondary">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-space-placeholder" height=90></div><!-- placeholder for header space -->
+
+  <div class="container content-container">
+    <div class="row">
+      <div class="col-lg-6 main-content-col">
+          <h2 class="main-content-header">Corporate Training Programs</h2>
+          <p> We offer a range of training programs that prepare Australian companies to work efficiently in the Japanese business environments. 
+              We can also customise our training programs to suite your busines situations. 
+          </p>
+          <p>
+              Our experienced trainers bring expertise in Japanese business culture and prepares your company to work efficiently with Japanese clients.
+          </p>
+          <p>
+            <button type="button" class="btn btn-primary cta-button hero-home-cta" data-toggle="modal" data-target="#trainingFromModal">Enrol Now</button>
+          </p>
+      </div>
+      <div class="col-lg-6 main-content-col">
+        <img src="img/training.jpg" alt="Training" class="content-img-main" />
+      </div>
+    </div>
+  </div>
+  <!-- Training form Modal -->
+  <div class="modal fade" id="trainingFromModal" tabindex="-1" role="dialog" aria-labelledby="trainingFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="trainingFormModalLabel">Service Order</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="firstname" class="required-field">First name</label>
+                  <input type="text" class="form-control" id="firstname" name="firstname">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lastname" class="required-field">Last name</label>
+                  <input type="text" class="form-control" id="lastname" name="lastname">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="required-field">Email</label>
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="mobile" class="required-field">Mobile number</label>
+              <input type="tel" class="form-control" id="mobile" name="mobile" aria-describedby="mobileHelp">
+            </div>
+            <div class="form-group">
+              <label for="company">Comapny name</label>
+              <input type="text" class="form-control" id="company" name="company">
+            </div>
+            <p></p>
+            <!-- Program -->
+            <div class="form-group">
+              <label for="program" class="required-field">Program</label>
+              <select id="program" class="form-control">
+                  <option value="">Please select program</option>
+                  <option value="Leadership Program">Leadership Program</option>
+                  <option value="Business Negotiation">Business Negotiation</option>
+                  <option value="Business Conversation">Business Conversation</option>
+                  <option value="Business Letter Writing">Business Letter Writing</option>
+                  <option value="Customised Training Programs">Customised Training Programs</option>
+                  <option value="Other">Other</option>
+              </select>
+            </div>
+            <!-- date -->
+            <div class="form-group">
+              <label for="startDate" class="required-field">Start Date<i class="fas fa fa-calendar-plus form-icon"></i></label>
+              <input type="date" class="form-control">
+            </div>
+            <!-- requirement details-->
+            <div class="form-group">
+              <label for="details">Requirement Details</label>
+              <textarea class="form-control" rows="4" id="details" name="details" placeholder="Please write your detailed requirements if applicable"></textarea>
+            </div>
+          </form>
+        </div><!--End of modal body-->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end of modal-->
+
+  <!-- training content -->
+  <div class="content-container-bg-div">
+    <div class="container content-container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center">Programs</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service-card">
+            <h4>Leadership Program</h4>
+            <p>Our 3-day leadership programs will prepare you to become an effective leader in multi-cultural teams.</P>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card">
+            <h4>Business Negotiation</h4>
+            <p>Our 2-day business negotiation program will improve your negotiation skills with Japnanese clients.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card">
+            <h4>Business Conversation</h4>
+            <p>You will learn the idiocincracies of Japanese business culture. This program is for 2 days. Understanding Japanese business culture will increase productivity working with Japanes clients.</P>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card">
+            <h4>Business Letter Writing</h4>
+            <p>Do you need to improve your Japanese business wrting skills? This program will help you to sharpen your Japanese writing skills for effective Japanese email & letter writing.</p>
+            <p>The program consists of 5 sessions.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card">
+            <h4>Customised Training Programs</h4>
+            <p>We can offer customised training programs. We can tailor our programs to what you request. We are happy to work with you to develop your custom training programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+  
+  <!-- footer -->
+  <div class="footer-container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="footer-sitemap-content">
+            <p class="footer-header">Our site</p>
+            <ul class="footer-ul">
+              <li class="footer-li">
+                <a class="footer-link" href="#">Home</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">Services</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">Training</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">Order</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footer-bottom">
+        <div class="col-sm-6">
+          <div class="copyright-container">
+            &copy;<span id="copyright-year"></span>. Sakura Translation
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="social-icons-container">
+            <div class="social-icon">
+                <img src="img/icons/facebook.png" alt="Facebook" class="social-logo-img"/></a>
+            </div>
+            <div class="social-icon">
+                <img src="img/icons/linkedin.png" alt="LinkedIn" class="social-logo-img"/></a>
+            </div>
+            <div class="social-icon">
+                <img src="img/icons/twitter.png" alt="Twitter" class="social-logo-img"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- build:js js/main.min.js -->
+  <script src="scripts/jquery.js" ></script>
+  <script src="scripts/popper.js" ></script>
+  <script src="scripts/bootstrap.js" ></script>
+  <script src="scripts/custom/custom.js" ></script>
+  <!-- endbuild -->
+</body>
+</html> 

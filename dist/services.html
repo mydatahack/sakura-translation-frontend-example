@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name = "keywords" content = "Japanese English, English Japanese, Japanese, Translation, Corporate Training" />
+  <meta name = "description" content = "Japanese English Translation Services" />
+  <title>Sakura Translation | Services</title>
+  <link rel="stylesheet" href="style/main.min.css" />
+</head>
+<body>
+
+  <!-- custom navbar -->
+  <div class="navigation-main">
+    <div class="nav-container">
+      <div class="navbar-brand-group">
+          <a class="navbar-brand-img-container" href="#">
+              <img class="navbar-brand-img" src="img/sakura-logo.png" alt="Sakura Translation logo">
+          </a>
+          <span class="navbar-brand-title" href="#">Sakura Translation</span>
+      </div>
+      <button class="navbar-burger" id="toggler">
+        <span class="navbar-burger-icon"></span>
+      </button>
+    </div>
+    <div class="navigation-panel">
+      <!-- navbar item container -->
+      <div class="navbar-item-container">
+        <ul class="navbar-ul">
+          <li class="nav-li">
+            <a class="nav-a" href="index.html">Home</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="services.html">Services</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="training.html">Training</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="order.html">Order</a>
+          </li>
+          <li class="nav-li">
+            <a class="nav-a" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav button container -->
+      <div class="nav-button-container">
+          <button class="btn btn-outline-success singin-button" type="button" id="signin" data-toggle="modal" data-target="#signInFormModal">Sign In</button>
+      </div>
+    </div><!-- end of navigation panel-->
+  </div> <!-- end of navigation main -->
+
+  <!-- Sign in Modal -->
+  <div class="modal fade" id="signInFormModal" tabindex="-1" role="dialog" aria-labelledby="signInFormModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header-custom">
+          <h4 class="modal-title" id="signInFormModalTitle">Sign in</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="username" class="required-field">Username</label>
+              <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password" class="required-field">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="modal-footer-custom">
+              <button type="submit" class="btn btn-secondary">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-space-placeholder" height=90></div><!-- placeholder for header space -->
+
+  <div class="container content-container">
+    <div class="row">
+        <div class="col-lg-6 main-content-col">
+            <h2 class="main-content-header">Our Services</h2>
+            <p> We offer Japanese-English and English Japanese translation services in Australia. We have a team of dedicated NAATI certified translators who are
+                specialised in each field. We can provide the services over email for your convenience. We can also arrange a translator to work on site for any project or sensitive information.
+            </p>
+            <button type="button" class="btn btn-primary cta-button hero-home-cta" data-toggle="modal" data-target="#orderFromModal">Enquire Now</button>
+        </div>
+        <div class="col-lg-6 main-content-col">
+          <img src="img/translate.jpg" alt="office" class="content-img-main" />
+        </div>
+      </div>
+  </div>
+  <!-- Order form Modal -->
+  <div class="modal fade" id="orderFromModal" tabindex="-1" role="dialog" aria-labelledby="orderFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderFormModalLabel">Service Order</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="firstname" class="required-field">First name</label>
+                  <input type="text" class="form-control" id="firstname" name="firstname">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lastname" class="required-field">Last name</label>
+                  <input type="text" class="form-control" id="lastname" name="lastname">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="required-field">Email</label>
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="mobile" class="required-field">Mobile number</label>
+              <input type="tel" class="form-control" id="mobile" name="mobile" aria-describedby="mobileHelp">
+            </div>
+            <div class="form-group">
+              <label for="company">Comapny name</label>
+              <input type="text" class="form-control" id="company" name="company">
+            </div>
+            <!-- Service Type -->
+            <div class="from-group">
+              <label class="required-field">Select the service type</label>
+              <p></p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="serviceTypes" id="EJtranslation" value="English to Japanese">
+                <label class="form-check-label" for="EJtranslation">English-Japanese Translation</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="serviceTypes" id="JEtranslation" value="Japanese to English">
+                <label class="form-check-label" for="EJtranslation">Japanese-English Translation</label>
+              </div>
+            </div>
+            <p></p>
+            <!-- Specialisation -->
+            <div class="form-group">
+              <label for="specialisation" class="required-field">Select specialisation</label>
+              <select id="specialisation" class="form-control">
+                  <option value="">Please select specialisation</option>
+                  <option value="Technical Translation"> Technical Translation</option>
+                  <option value="Legal Translation"> Legal Transaltion </option>
+                  <option value="Scientific Translation"> Scientific Translation </option>
+                  <option value="Financial Translation"> Financial Translation </option>
+                  <option value="Business Translation"> Business Translation </option>
+                  <option value="Journalism Translation"> Journalism Translation </option>
+                  <option value="Website Translation"> Website Translation </option>
+                  <option value="Literary Translation"> Literary Translation </option>
+                  <option value="On Site Translation"> On Site Translation</option>
+                  <option value="Other">Other</option>
+              </select>
+            </div>
+            <!-- Word count-->
+            <div class="form-group">
+              <label for="wordcount" class="required-field">How many words are there in the original document?</label>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="wordcount" name="wordcount" placeholder="Word count must be a number" >
+                </div>
+              </div> 
+            </div>
+            <!-- requirement details-->
+            <div class="form-group">
+              <label for="details">Requirement Details</label>
+              <textarea class="form-control" rows="4" id="details" name="details" placeholder="Please write your detailed requirements"></textarea>
+            </div>
+          </form>
+        </div><!--End of modal body-->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end of modal-->
+
+  <div class="container content-container underline-header-container">
+    <div class="row">
+      <div class="col">
+        <h2>Specialization</h2>
+        <hr class="subtitle-header-underline">
+      </div>
+    </div>
+
+    <!-- specialisation card -->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Technical</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+              <hr class="flip-card-divider">
+              <p class="flip-card-back-details">We can translate any technical documents, including instructions for hardware, software, mechanical equipment, engineering products, and more.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Legal</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">We can translate any legal documents, including contracts, certifications, driver licence and court documents and more.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Scientific</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">We can translate any scientific writing, including journal papers, conference synopsis, lab notebooks, and more.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Financial</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">We can translate any financial/ accounting documents, including official and unofficial documents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Business</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">We can translate any business-related documents, including articles, journal papers, conference presentations, emails.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Journalism</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">We can translate any news & featured articles.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Website</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">We offer localisation translation to transform your websites to suit the local market.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">Literary</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">We can translate any fiction and non-fiction writing.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+      <div class="col-lg-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="flip-card-title">On Site</p>
+                <div class="circle"><div class="arrow"></div></div>
+            </div>
+            <div class="flip-card-back">
+                <p class="flip-card-back-details">Our translators can work on site for your project or any sensitive documents.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+    </div>
+    
+
+    <div class="row">
+
+    </div>
+
+  </div>
+
+  
+  <!-- footer -->
+  <div class="footer-container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="footer-sitemap-content">
+            <p class="footer-header">Our site</p>
+            <ul class="footer-ul">
+              <li class="footer-li">
+                <a class="footer-link" href="#">Home</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">Services</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">Training</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">Order</a>
+              </li>
+              <li class="footer-li">
+                <a class="footer-link" href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footer-bottom">
+        <div class="col-sm-6">
+          <div class="copyright-container">
+            &copy;<span id="copyright-year"></span>. Sakura Translation
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="social-icons-container">
+            <div class="social-icon">
+                <img src="img/icons/facebook.png" alt="Facebook" class="social-logo-img"/></a>
+            </div>
+            <div class="social-icon">
+                <img src="img/icons/linkedin.png" alt="LinkedIn" class="social-logo-img"/></a>
+            </div>
+            <div class="social-icon">
+                <img src="img/icons/twitter.png" alt="Twitter" class="social-logo-img"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- build:js js/main.min.js -->
+  <script src="scripts/jquery.js" ></script>
+  <script src="scripts/popper.js" ></script>
+  <script src="scripts/bootstrap.js" ></script>
+  <script src="scripts/custom/custom.js" ></script>
+  <!-- endbuild -->
+</body>
+</html> 
