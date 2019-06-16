@@ -10,7 +10,7 @@ describe('specialisation-card.spec.js', function() {
   // afterEach(function() {
   //   fixture.cleanup();
   // });
-  var spyEvent;
+
   beforeEach(()=> {
     viewport.set(320);
 

@@ -1,28 +1,45 @@
 # sakura-translation-frontend-example
 
-## Front-end example with gulp
+## Front-end Development Example
 
-This is the example of using gulp for automated front-end development and build. The source folder contains html, 3rd party css and Javascript libraries, custom sass and Javascript, and images. 
+This is the example of Front end development by using HTML, CSS and JavaScript. It is not using any JavaScript framework like React or Angular. It includes all the technologies that are usually used in enterprise front end development for the classic HTML/CSS/Javascript approach.
 
-## Third party Javascript & bootstrap
+- Gulp for build & local server hot loading.
+- gulp-babel to transpiling ES6 syntax to ES5.
+- Karma for JavaScript unit tests.
+- HTML
+- SASS
+- JavaScript
 
-Here is the list of 3rd party JS & CSS libraries
+## (1) Approach to Styling
 
-### bootstrap
+Installed Bootstrap 4 with npm i bootstrap. Copied & pasted all scss files into the style folder. Then customised Bootstrap when necessary as well as adding custom SASS code. All the files get compiled into a single main style file by gulp.
 
-npm i bootstrap. Copy the files from node_modules/bootstrap/scss and pasted to src/sass/bootstrap. In this way, we can edit bootstrap sass files for customisation. Alternatively, move node_modules/bootstrap/dist/css into src/css folder and bundle them with custom sass.
+## (2) Approach to JavaScript
 
-Moved node_modules/bootstrap/bootstrap.min.js into /src/script folder
+- Main Libray
 
-### JQuery & Popper.js
+  * Chose to use jQuery because it is the most prevalent libraries out there.
 
-Moved node_modules/jquery.js and node_modules/dist/popper.js into /src/script folder.
+- ES6 Syntax
 
-### [jquery-sakura.js](https://github.com/timoschaefer/jQuery-Sakura)
+  * The gulp babel plugins enables us to write ES6 syntax and complies down to ES5. Plugins are selected individually. In this way, we can have better clarity on what can be transpiled.
 
-Downloaded the whole folder from github and moved jquery-sakura.min.css to src/css folder and jquery-sakura.min.js to scripts/minified folder.
+- Namespace
 
-## Transpiling ES6 syntax to ES5
+  * Instead of adding variables & functions to the global window object, I created sakura.public namespace. In this way, we do not need to pollute the global namespace and I feel it is a better approach. On document ready, event handlers get initialized.
 
-npm install --save-dev gulp-babel @babel/core @babel/preset-env @babel/polyfill
+## (3) Approach to Unit Testing
+
+Using [Karma](https://karma-runner.github.io/latest/index.html) for test runner and [Jasmine](https://jasmine.github.io/2.0/introduction.html) for framework.
+
+Karma uses headless chrome broweser and I find emulating the UI behaviour nicer than other tools.
+
+## (4) Other third party Javascript
+
+For Cherry blossom petal fall animation, I am using this fantastic javascript library!
+
+- [jquery-sakura.js](https://github.com/timoschaefer/jQuery-Sakura)
+
+
 

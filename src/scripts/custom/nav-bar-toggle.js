@@ -2,7 +2,8 @@
 
   const namespaceSakura = sakuraNamespace.public || (sakuraNamespace.public = {});
 
-  const mobileToggleAnimation = namespaceSakura.mobileToggleAnimation = () => {
+  // private method
+  const mobileToggleAnimation = () => {
     const navPanel = jQuery('.navigation-panel');
     const toggle = jQuery('#toggler');
     navPanel.css('height', '');
@@ -16,11 +17,15 @@
     }
   };
 
-  jQuery('#toggler').click( () => {
-    mobileToggleAnimation();
-  });
+  // public method initialised on document ready
+  const mobileNavToggleClickInit = namespaceSakura.mobileNavToggleClickInit = () => {
+    jQuery('#toggler').click( () => {
+      mobileToggleAnimation();
+    });
+  };
 
-  const navBarFixTop = namespaceSakura.navBarFixTop = () => {
+  // private method
+  const navBarFixTop = () => {
     const navMain = jQuery('.navigation-main');
     const signInBtn = jQuery('#signin');
     if (!navMain.hasClass('scrolled')) {
@@ -41,9 +46,12 @@
     }
   };
 
-  jQuery(document).scroll( () => {
-    navBarFixTop();
-  });
+  // public method initialised on document ready
+  const navBarFixTopInit = namespaceSakura.navBarFixTopInit = () => {
+    jQuery(document).scroll( () => {
+      navBarFixTop();
+    });
+  };
 
 })(jQuery, window.sakura || (window.sakura = {}));
 
