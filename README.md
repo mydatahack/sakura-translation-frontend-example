@@ -23,7 +23,7 @@ Installed Bootstrap 4 with npm i bootstrap. Copied & pasted all scss files into 
 
 - ES6 Syntax
 
-  * The gulp-babel plugins enables us to write ES6 syntax and complies down to ES5. Plugins are selected individually. In this way, we can have better clarity on what we can write.
+  * The gulp-babel plugins enables us to write ES6 syntax and complies down to ES5. Plugins are selected individually (see prodJs gulp task where pulgins are piped individually). In this way, we can have better clarity on what we can write.
 
 - Namespace
 
