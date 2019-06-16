@@ -13,6 +13,10 @@ const lazypipe = require('lazypipe');
 const order = require('gulp-order');
 const babel = require('gulp-babel');
 const gutil = require('gulp-util');
+const rollup = require('rollup');
+const rollupTypescript = require('rollup-plugin-typescript2');
+const rollupUglify = require('rollup-plugin-uglify').uglify;
+const rollupNodeResolve = require('rollup-plugin-node-resolve');
 
 // Default task only gets executed when typed only gulp
 gulp.task('default', async () => {
@@ -98,6 +102,44 @@ gulp.task('css', (callback) => {
   runSequence('sass2Css', 'minifyCss','copyCss', callback);
 });
 
+// Compile TypeScript into a source javascript folder
+gulp.task('compileTs', () => {
+  return rollup.rollup({
+    input: './src/scripts/main.ts',
+    plugins: [
+      rollupTypescript({
+        cacheRoot: '.rollupcache',
+        tsconfigOverride: {
+          compilerOptions: {
+            removeComments: true,
+          }
+        }
+      }),
+      rollupNodeResolve({}),
+      // prodJs combines all the files
+      // rollupUglify({
+      //   compress: {
+      //     drop_console: false
+      //   }
+      // })
+    ],
+    external: ['jquery']
+  }).then(bundle => {
+    return bundle.write({
+      file: './src/scripts/custom/ts.components.js',
+      format: 'iife',
+      // extend sakura namespace instead of replace
+      name: 'sakura',
+      extend: true,
+      sourcemap: false,
+      globals: {
+        // map module 'jquery' to global 'jQuery'
+        jquery: 'jQuery'
+      }
+    });
+  });
+});
+
 // Production build with processJs
 gulp.task('prodJs', function() {
   return gulp.src('src/*.html')
@@ -132,8 +174,12 @@ gulp.task('prodJs', function() {
 //   runSequence('css', ['minifyImgs', 'moveMinifiedJs', 'devJs'], callback);
 // });
 
+gulp.task('deployJs', (callback) => {
+  runSequence('compileTs', 'prodJs', callback);
+});
+
 gulp.task('build:prod', (callback) => {
-  runSequence('css', ['minifyImgs', 'moveMinifiedJs', 'prodJs'], callback);
+  runSequence('css', 'compileTs', ['minifyImgs', 'moveMinifiedJs', 'prodJs'], callback);
 });
 
 // Watch source file change and reload browser for development

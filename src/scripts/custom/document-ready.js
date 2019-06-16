@@ -12,4 +12,8 @@ $( document ).ready(function(){
   sakura.public.initCardEventListener();
   sakura.public.mobileNavToggleClickInit();
   sakura.public.navBarFixTopInit();
+
+  // Initialising form validation
+  var validation = new sakura.validation.ValidationEventHandler();
+  validation.init();
 });

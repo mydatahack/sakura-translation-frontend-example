@@ -18,6 +18,7 @@
 
   const init = namespaceSakura.initCardEventListener = () => {
     // not using () => {} to avoid lexical scoping for this.
+    // Alternatively, can use (event) => { const $this = $(event.currentTarget)}
     jQuery('.flip-card-inner').click(function() {
       cardOpenClose(jQuery(this));
     });
