@@ -9,7 +9,7 @@ This is the example of Front end development by using HTML, CSS and JavaScript. 
 - Karma for JavaScript unit tests.
 - HTML
 - SASS
-- JavaScript
+- jQuery
 
 ## (1) Approach to Styling
 
@@ -19,15 +19,15 @@ Installed Bootstrap 4 with npm i bootstrap. Copied & pasted all scss files into 
 
 - Main Libray
 
-  * Chose to use jQuery because it is the most prevalent libraries out there.
+  * Using jQuery.
 
 - ES6 Syntax
 
-  * The gulp babel plugins enables us to write ES6 syntax and complies down to ES5. Plugins are selected individually. In this way, we can have better clarity on what can be transpiled.
+  * The gulp-babel plugins enables us to write ES6 syntax and complies down to ES5. Plugins are selected individually. In this way, we can have better clarity on what we can write.
 
 - Namespace
 
-  * Instead of adding variables & functions to the global window object, I created sakura.public namespace. In this way, we do not need to pollute the global namespace and I feel it is a better approach. On document ready, event handlers get initialized.
+  * Instead of adding variables & functions to the global scope, I created sakura.public namespace. In this way, we do not need to pollute the global. I feel it's a better approach. On document ready, event handlers get initialized.
 
 ## (3) Approach to Unit Testing
 
@@ -35,7 +35,7 @@ Using [Karma](https://karma-runner.github.io/latest/index.html) for test runner 
 
 Karma uses headless chrome broweser and I find emulating the UI behaviour nicer than other tools.
 
-## (4) Other third party Javascript
+## (4) Petal Falling Effect
 
 For Cherry blossom petal fall animation, I am using this fantastic javascript library!
 
