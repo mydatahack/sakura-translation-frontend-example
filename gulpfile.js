@@ -70,11 +70,13 @@ gulp.task('moveMinifiedJs', async () => {
 
 // Process Sass
 gulp.task('sass2Css', () => {
-  return gulp.src('src/sass/**/*.scss')
-    .pipe(order([
-      'src/sass/bootstrap/*.scss',
-      'src/sass/custom/*.scss'
-    ]))
+  return gulp.src('src/sass/custom/*.scss')
+    // .pipe(order([
+    //   'src/sass/bootstrap/bootstrap-grid.scss',
+    //   'src/sass/bootstrap/bootstrap-reboot.scss',
+    //   'src/sass/bootstrap/bootstrap.scss',
+    //   'src/sass/custom/custom.scss'
+    // ]))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write())
@@ -170,6 +172,10 @@ gulp.task('prodJs', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('moveToGitIo', (callback) => {
+  return gulp.src('dist/**/*')
+    .pipe(gulp.dest('../mydatahack.github.io/sakura/'));
+})
 // gulp.task('build:dev', (callback) => {
 //   runSequence('css', ['minifyImgs', 'moveMinifiedJs', 'devJs'], callback);
 // });
@@ -179,7 +185,7 @@ gulp.task('deployJs', (callback) => {
 });
 
 gulp.task('build:prod', (callback) => {
-  runSequence('css', 'compileTs', ['minifyImgs', 'moveMinifiedJs', 'prodJs'], callback);
+  runSequence('css', 'compileTs', ['minifyImgs', 'moveMinifiedJs', 'prodJs'], 'moveToGitIo', callback);
 });
 
 // Watch source file change and reload browser for development

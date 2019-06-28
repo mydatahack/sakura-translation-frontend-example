@@ -13,6 +13,20 @@ This is the example of Front end development by using HTML, CSS and JavaScript. 
 - JavaScript
 - TypeScript
 
+## Get started
+
+After cloning repo, install dependencies, build and start the app.
+```
+npm i
+npm run build:prod
+npm start
+```
+
+Run unit test.
+```
+npm test
+```
+
 ## (1) Approach to Styling
 
 Installed Bootstrap 4 with npm i bootstrap. Copied & pasted all scss files into the style folder. Then customised Bootstrap when necessary as well as adding custom SASS code. All the files get compiled into a single main style file by gulp.

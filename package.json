@@ -6,7 +6,9 @@
   "scripts": {
     "eslint": "eslint src/scripts/custom/*.js",
     "test": "karma start karma.conf.js",
-    "test:debugger": "karma start --browsers ChromeDebugging"
+    "test:debugger": "karma start --browsers ChromeDebugging",
+    "build:prod": "gulp build:prod",
+    "start": "gulp checkDist"
   },
   "repository": {
     "type": "git",

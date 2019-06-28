@@ -1,6 +1,11 @@
+// Importing bootstrap
+// @import "../bootstrap/bootstrap-grid.scss";
+// @import "../bootstrap/bootstrap-reboot.scss";
+@import "../bootstrap/bootstrap.scss";
+
+// importing custom css
 @import "animation";
-@import "buttons";
 @import "components";
 @import "navigation";
 @import "img";
-@import "_form-validation";
+@import "form-validation";
