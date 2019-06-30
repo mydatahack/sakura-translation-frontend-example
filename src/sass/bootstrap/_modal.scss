@@ -137,15 +137,16 @@
   align-items: flex-start; // so the close btn always stays on the upper right corner
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
-  border-bottom: $modal-header-border-width solid $modal-header-border-color;
-  @include border-top-radius($modal-content-border-radius);
-
   .close {
     padding: $modal-header-padding;
     // auto on the left force icon to the right even when there is no .modal-title
     margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
   }
 }
+// removed from .modal-header
+// not showing border
+  // border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  // @include border-top-radius($modal-content-border-radius);
 
 // Title text within header
 .modal-title {
@@ -169,13 +170,15 @@
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
   padding: $modal-inner-padding;
-  border-top: $modal-footer-border-width solid $modal-footer-border-color;
-  @include border-bottom-radius($modal-content-border-radius);
-
+  
   // Easily place margin between footer elements
   > :not(:first-child) { margin-left: .25rem; }
   > :not(:last-child) { margin-right: .25rem; }
 }
+// removed from modal-footer
+// not showing border - custom
+// border-top: $modal-footer-border-width solid $modal-footer-border-color;
+// @include border-bottom-radius($modal-content-border-radius);
 
 // Measure scrollbar width for padding body during modal show/hide
 .modal-scrollbar-measure {
@@ -226,4 +229,19 @@
 
 @include media-breakpoint-up(xl) {
   .modal-xl { max-width: $modal-xl; }
+}
+
+// modal footer overwrite
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
 }

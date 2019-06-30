@@ -70,7 +70,7 @@ gulp.task('moveMinifiedJs', async () => {
 
 // Process Sass
 gulp.task('sass2Css', () => {
-  return gulp.src('src/sass/custom/*.scss')
+  return gulp.src('src/sass/**/*.scss')
     // .pipe(order([
     //   'src/sass/bootstrap/bootstrap-grid.scss',
     //   'src/sass/bootstrap/bootstrap-reboot.scss',
