@@ -143,7 +143,7 @@
                       _this.selectInputValidator(jQuery(e.currentTarget), e, 'date');
                   }
               });
-              jQuery("input[type='text'], input[type='email'], input[type='tel'], textarea, input[type='password']").keypress(function (e) {
+              jQuery("input[type='text'], input[type='email'], input[type='tel'], textarea, input[type='password']").on('keypress change', function (e) {
                   if (jQuery(e.currentTarget).attr('id') === 'firstname') {
                       _this.inputFieldChangeHandler(jQuery('form'), jQuery(e.currentTarget), 'firstname');
                   }
@@ -160,14 +160,12 @@
                       _this.inputFieldChangeHandler(jQuery('form'), jQuery(e.currentTarget), 'wordcount');
                   }
                   else if (jQuery(e.currentTarget).attr('id') === 'message') {
-                      console.log('keypress event on message field');
                       _this.inputFieldChangeHandler(jQuery('form'), jQuery(e.currentTarget), 'message');
                   }
                   else if (jQuery(e.currentTarget).attr('id') === 'username') {
                       _this.inputFieldChangeHandler(jQuery('form'), jQuery(e.currentTarget), 'username');
                   }
                   else if (jQuery(e.currentTarget).attr('id') === 'password') {
-                      console.log('keypress event on password field');
                       _this.inputFieldChangeHandler(jQuery('form'), jQuery(e.currentTarget), 'password');
                   }
               });

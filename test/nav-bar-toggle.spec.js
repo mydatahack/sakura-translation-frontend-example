@@ -89,5 +89,4 @@ describe('nav-bar-toggle.spec.js', () => {
       expect(signInBtn.hasClass('btn-outline-success')).toBe(true);
     });
   });
-})
-;
+});

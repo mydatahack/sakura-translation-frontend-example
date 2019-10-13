@@ -65,7 +65,7 @@ export namespace validation {
 
       });
 
-      jQuery("input[type='text'], input[type='email'], input[type='tel'], textarea, input[type='password']").keypress((e) => {
+      jQuery("input[type='text'], input[type='email'], input[type='tel'], textarea, input[type='password']").on('keypress change', (e) => {
         if (jQuery(e.currentTarget).attr('id') === 'firstname') {
           this.inputFieldChangeHandler(jQuery('form'), jQuery(e.currentTarget), 'firstname');
         } else if (jQuery(e.currentTarget).attr('id') === 'lastname') {
